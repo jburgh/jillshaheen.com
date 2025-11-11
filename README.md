@@ -10,49 +10,26 @@ This is a single-page portfolio website showcasing professional experience, tech
 
 Visit the live portfolio at: [jillshaheen.com](https://jillshaheen.com)
 
-## Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
-- **Smooth Scrolling Navigation**: Fixed navigation bar with smooth scroll-to-section functionality
-- **Interactive Timeline**: Animated professional experience timeline
-- **Skills Showcase**: Technical skills organized by category with icons
-- **Projects Gallery**: Dynamic project cards with modal detail views
-- **Contact Integration**: Direct email and LinkedIn profile links
-- **Modern UI**: Clean, professional design with mid-century modern typography
-
-## Technologies Used
-
-### Frontend
-- HTML5
-- CSS3 (Custom styling)
-- JavaScript (jQuery)
-- Bootstrap 5.3.0
-- Font Awesome 6.4.0
-- Google Fonts (Oswald, Merriweather)
-
-### Tools & Libraries
-- jQuery 3.7.0
-- Bootstrap Bundle (JS components)
-- Custom animations and transitions
 
 ## Project Structure
 
 ```
 jillshaheen.com/
 ├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-├── favicon_io/         # Favicon files
-├── img/                # Image assets
-│   └── profile.jpg     # Profile photo
-├── projects/           # Project images and assets
-│   ├── emr-console-thumb.png
-│   ├── error-thumb.png
-│   ├── notebooks.png
-│   └── s3.png
-├── profile.jpg         # Profile image (main)
-├── profile2.jpg        # Alternate profile image
-└── README.md           # This file
+├── css/
+│   └── styles.css      # Custom CSS styles
+├── js/
+│   └── script.js        # JavaScript functionality
+├── img/                 # Image assets
+│   ├── profile.jpg      # Profile photo
+│   ├── favicon/         # Favicon files
+│   └── projects/        # Project images and assets
+│       ├── emr-console-thumb.png
+│       ├── error-thumb.png
+│       ├── notebooks.png
+│       └── s3.png
+└── README.md            # This file
 ```
 
 ## Sections
@@ -72,6 +49,10 @@ jillshaheen.com/
    - Marketing/CRM
 5. **Education**: Academic credentials from Duquesne University
 6. **Projects**: Portfolio of notable work and achievements
+   - Click project cards to view detailed information in a modal
+   - Projects with images display thumbnails next to descriptions
+   - Click thumbnails to view images in full-screen mode
+   - Projects with external links show an icon next to the title
 7. **Contact**: Email and LinkedIn connection options
 
 ## Local Development
@@ -100,13 +81,18 @@ npx http-server
 ### Updating Content
 
 - **Personal Information**: Edit the content in `index.html` within each section
-- **Styles**: Modify `styles.css` for design changes
-- **Images**: Replace images in the `img/` and `projects/` directories
-- **Projects**: Add project data in `script.js` for dynamic loading
+- **Styles**: Modify `css/styles.css` for design changes
+- **Images**: Replace images in the `img/` directory
+  - Profile images: `img/profile.jpg`
+  - Project images: `img/projects/` directory
+- **Projects**: Add or modify project data in `js/script.js` within the `PROJECTS_DATA` array
+  - Each project can include: `id`, `title`, `projectType`, `description`, `fullDescription`, `skills`, `results`, `link`, `image`, `tags`
+  - Projects with an `image` property will display a thumbnail in the modal
+  - Projects with a `link` property will show a clickable icon next to the title
 
 ### Color Scheme
 
-The site uses a professional color palette that can be customized in `styles.css`:
+The site uses a professional color palette that can be customized in `css/styles.css`:
 - Primary colors defined in CSS custom properties
 - Mid-century modern inspired design elements
 - Accessible color contrast ratios
@@ -118,13 +104,6 @@ The site uses a professional color palette that can be customized in `styles.css
 - Safari (latest)
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance
-
-- Optimized images for web
-- Minified external libraries via CDN
-- Efficient CSS animations
-- Lazy loading for project images
 
 ## Contact
 
