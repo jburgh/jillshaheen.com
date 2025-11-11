@@ -1,0 +1,25 @@
+{
+  "name": "jillshaheen.com",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Jill Shaheen - Technical Writer, Content Strategist, and Team Leader.",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server --port=8080 --open=/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jburgh/jillshaheen.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jburgh/jillshaheen.com/issues"
+  },
+  "homepage": "https://github.com/jburgh/jillshaheen.com#readme"
+}
